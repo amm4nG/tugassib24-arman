@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Dasar HTML</title>
+</head>
+
+<body>
+    <form action="" method="">
+        <label for="nama">Nama</label>
+        <br>
+        <input type="text" name="nama" id="nama" placeholder="Nama lengkap">
+        <br>
+        <br>
+        <label for="email">Email</label>
+        <br>
+        <input type="email" name="email" id="email" placeholder="Email aktif">
+        <br>
+        <br>
+        <label for="no_hp">No HP</label>
+        <br>
+        <input type="number" name="no_hp" id="no_hp" placeholder="No HP aktif">
+        <br>
+        <br>
+        <label>Jenis kelamin</label>
+        <br>
+        <input type="radio" id="laki-laki" name="jenis_kelamin"> <label for="laki-laki">Laki-laki</label>
+        <br>
+        <input type="radio" id="perempuan" name="jenis_kelamin"> <label for="perempuan">Perempuan</label>
+        <br>
+        <br>
+        <label for="prodi">Prodi</label>
+        <br>
+        <select name="prodi" id="prodi">
+            <option selected disabled>Pilih</option>
+            <option value="sipil">Sipil</option>
+            <option value="informatika">Informatika</option>
+            <option value="pwk">PWK</option>
+        </select>
+        <br>
+        <label>Hobi</label>
+        <br>
+        <input type="checkbox" name="membaca" id="membaca"> <label for="membaca">Membaca</label>
+        <br>
+        <input type="checkbox" name="menulis" id="menulis"> <label for="menulis">Menulis</label>
+        <br>
+        <input type="checkbox" name="menyanyi" id="menyanyi"> <label for="menyanyi">Menyanyi</label>
+        <br>
+        <input type="checkbox" name="olahraga" id="olahraga"> <label for="olahraga">Olahraga</label>
+        <br>
+        <br>
+        <label for="alamat">Alamat</label>
+        <br>
+        <textarea name="alamat" id="alamat" cols="30" rows="3" placeholder="Alamat lengkap"></textarea>
+        <br>
+        <br>
+        <label for="foto">Foto Diri</label>
+        <br>
+        <input type="file" id="foto" name="foto">
+        <br>
+        <button type="submit">Daftar</button>
+    </form>
+</body>
+
+</html>
