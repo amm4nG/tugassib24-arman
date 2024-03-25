@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    border: 1px solid darkblue;
+    padding: 20px 40px 20px 20px;
+    border-radius: 15px;
+}
+
+h1{
+    text-align: center;
+    color: #38527E;
+}
+
+.form-control{
+    width: 100%;
+    border-radius: 10px;
+    height: 20px;
+    margin-top: 20px;
+    border: 1px solid #38527E;
+}
+
+.form-control::placeholder {
+  padding-left: 8px;
+  color: #38527E; 
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button{
+    background-color: #38527E;
+    margin-top: 15px;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    border: none;
+    font-size: large;
+}

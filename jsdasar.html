@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Dasar</title>
+</head>
+
+<body>
+    <h1 id="title">JS Dasar</h1>
+    <button onclick="tambah()">Tambah</button> <span id="result"> 0 </span> <button onclick="kurang()">Kurang</button>
+    <br>
+    <br>
+    <!-- javascript langsung dalam file html -->
+    <script>
+        // conversion
+        let value = false
+        console.log(`Type sebelumnya : ${typeof value}`);
+        value = String(value);
+        console.log(`Type setelah diupdate : ${typeof value}`);
+
+        let number = "1234"
+        console.log(`Type sebelumnya : ${typeof number}`);
+        number = Number(number)
+        console.log(`Type setelah diupdate : ${typeof number}`);
+        /*
+                Disini kita akan belajar dasar dasar atau fundamental
+                dalam javascript
+                */
+        const judul = "Belajar JS Dasar"
+        // judul = "Belajar JS Fundamnetal" // ketika block ini dibuka maka akan terjadi error
+        document.write(judul + "<br><br>")
+
+        alert("Anda masuk pada halaman JS Dasar Arkatama")
+
+        let hasilKonfirmasi = confirm("Apakah Anda yakin ingin melanjutkan?");
+        if (hasilKonfirmasi) {
+            alert("Konfirmasi diterima")
+
+            let namaPengguna = prompt("Silakan masukkan nama Anda : ", "Arman");
+
+            if (namaPengguna != null || namaPengguna == "") {
+                alert("Halo, " + namaPengguna + "! Selamat datang.")
+            } else {
+                alert("Nama pengguna tidak diketahui")
+            }
+
+        } else {
+            window.location = 'index.html'
+        }
+
+        // mengambil elemen html menggunakan id
+        let title = document.getElementById('title')
+        // menambahkan teks Arkatama pada element yang memiliki id tittle
+        title.append(" Arkatama")
+
+        let namaDepan = "Arman "
+        let namaBelakang = "Umar"
+
+        // menggabungkan 2 variable string
+        let namaLengkap = namaDepan + namaBelakang
+
+        // mencetak variable namaLengkap sebanyak 10 kali dalam browser
+        for (let index = 1; index <= 10; index++) {
+            document.write(` ${index}. Nama lengkap : ${namaLengkap} <br>`)
+            // tapi jika nilai index sudah lebih besar atau sama dengan 5, hentikan perulangan
+            if (index >= 5) {
+                break
+            }
+        }
+
+        // menampilkan variable namaLengkap didalam console log
+        console.log(namaLengkap);
+
+        // array
+        document.write(`<br> My Skills <br>`)
+        let skills = ['laravel', 'php', 'bootstrap', 'javascript', 'restfull API', 'Jquery Ajax']
+        let no = 0
+        skills.forEach(skill => {
+            no++
+            document.write(`${no}. ${skill} <br>`)
+        });
+
+        nilai = 0
+        let result = document.getElementById('result')
+
+        function tambah() {
+            if (nilai < 5) {
+                nilai++
+            }
+            result.innerHTML = nilai
+        }
+
+        function kurang() {
+            if (nilai > 0) {
+                nilai -= 1
+            }
+            result.innerHTML = nilai
+        }
+
+        // menampilkan bilangan ganjil dari rentang 1 sampai 10
+        // menggunakan while
+        let ganjil = 1
+        while (ganjil <= 10) {
+            if (ganjil % 2 != 0) {
+                document.write(`<br>${ganjil} adalah bilangan ganjil <br>`)
+            }
+            ganjil++
+        }
+
+        // penggunaan do while dalam pencarian bilangan genap mulai dari rentang 1 sampai 10
+        let genap = 1
+        do {
+            if (genap % 2 == 0) {
+                document.write(`<br>${genap} adalah bilangan genap <br>`)
+            }
+            genap++
+        } while (genap <= 10);
+
+        // tipe data object 
+        let karyawan = {
+            nama: "Arman",
+            age: 21,
+            job: "Web Developer",
+            isMarried: false
+        }
+        document.write(`<br>My Name is ${karyawan.nama} and he is ${karyawan.age} years old`)
+
+
+        // operator ternary
+        let a = 3
+        console.log(a == 3? 'Oke sama' : 'Tidak sama');
+
+        // percabangan if else
+        let grade = 70
+        if (grade >= 50) {
+            console.log("Anda dinyatakan lulus");
+        } else {
+            console.log("Anda tidak lulus");
+        }
+    </script>
+</body>
+
+</html>
